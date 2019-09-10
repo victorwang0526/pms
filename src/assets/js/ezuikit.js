@@ -164,6 +164,8 @@
     this.opt = {};
     this.opt.sources = [];
     this.handlers = {};
+    // 将播放地址配置在实例 opt 属性中
+    this.opt.sources.push(playParams.url);
 
     // 修订 - 支持JS Decoder 允许非字符串配置项
     if (typeof playParams === 'object' && playParams.hasOwnProperty('decoderPath')) {
@@ -182,8 +184,6 @@
         throw new Error('EZUIDecoder requires parameter url');
         return;
       }
-      // 将播放地址配置在实例 opt 属性中
-      this.opt.sources.push(playParams.url);
       // JSDecoder  只有一个播放地址
       this.opt.currentSource = this.opt.sources[0];
 

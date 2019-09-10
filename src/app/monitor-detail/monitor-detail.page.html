@@ -8,11 +8,11 @@
 </ion-header>
 
 <ion-content>
-    <h2>视频1@DS-7808NB-K2(C30163833)</h2>
+    <h2>{{monitor?.name}}</h2>
   <video
     id="myPlayer"
     autoplay
-    src="https://hls01open.ys7.com/openlive/f2ac3ac4b62a4a2ab24aaff29cb39112.m3u8"
+    src="{{monitor?.url}}"
     controls
     playsInline
     webkit-playsinline
