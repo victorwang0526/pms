@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {NavController} from "@ionic/angular";
+import {EmployeeCardDetailPage} from "../employee-card-detail/employee-card-detail.page";
 
 @Component({
   selector: 'app-employee-card',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeCardPage implements OnInit {
 
-  constructor() { }
+  constructor(private navCtrl: NavController) { }
 
   employees: Array<any> = [
     {name: '闫磊', avatar: 'yanlei.png', birthDay: '1992年5月7日', post: '劳务负责人', idNo: '640321199205071530', registeDate: '2019年2月', expired: '一年', issueDate: '2019年2月15日'},
@@ -22,6 +24,10 @@ export class EmployeeCardPage implements OnInit {
   ];
 
   ngOnInit() {
+  }
+
+  openDetail(e) {
+    this.navCtrl.navigateForward('employee-card-detail', {});
   }
 
 }

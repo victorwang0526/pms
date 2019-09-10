@@ -14,7 +14,7 @@
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let e of employees">
+    <ion-item *ngFor="let e of employees" (click)="openDetail(e)">
       <ion-avatar slot="start">
         <img src="assets/image/avatar/{{e.avatar}}">
       </ion-avatar>

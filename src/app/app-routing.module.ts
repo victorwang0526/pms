@@ -8,7 +8,9 @@ const routes: Routes = [
   },
   { path: 'employee-card', loadChildren: './employee-card/employee-card.module#EmployeeCardPageModule' },
   { path: 'monitoring', loadChildren: './monitoring/monitoring.module#MonitoringPageModule' },
-  { path: 'settings', loadChildren: './settings/settings.module#SettingsPageModule' }
+  { path: 'settings', loadChildren: './settings/settings.module#SettingsPageModule' },
+  { path: 'employee-card-detail', loadChildren: './employee-card-detail/employee-card-detail.module#EmployeeCardDetailPageModule' },
+  { path: 'monitor-detail', loadChildren: './monitor-detail/monitor-detail.module#MonitorDetailPageModule' }
 ];
 @NgModule({
   imports: [

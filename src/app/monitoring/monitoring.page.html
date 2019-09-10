@@ -9,7 +9,7 @@
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let m of monitors">
+    <ion-item *ngFor="let m of monitors"  (click)="openDetail(m)">
       <ion-icon name="radio-button-on" size="small" [color]="m.status == '在线' ? 'success': 'danger'"></ion-icon>
       <ion-label>{{m.name}}</ion-label>
     </ion-item>

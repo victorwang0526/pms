@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NavController} from "@ionic/angular";
 
 @Component({
   selector: 'app-monitoring',
@@ -19,9 +20,12 @@ export class MonitoringPage implements OnInit {
     {channel: '9', name: '视频9@DS-7808NB-K2(C30163833)', status: '不在线', liveStatus: '未开通', url: ''},
     {channel: '10', name: '视频10@DS-7808NB-K2(C30163833)', status: '不在线', liveStatus: '未开通', url: ''},
   ];
-  constructor() { }
+  constructor(private navCtrl: NavController) { }
 
   ngOnInit() {
   }
 
+  openDetail(m) {
+    this.navCtrl.navigateForward('monitor-detail', {})
+  }
 }
