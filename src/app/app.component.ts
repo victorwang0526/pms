@@ -4,6 +4,8 @@ import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
+import {AuthenticationService} from "./services/authentication.service";
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -16,7 +18,9 @@ export class AppComponent {
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    private screenOrientation: ScreenOrientation
+    private screenOrientation: ScreenOrientation,
+    private authenticationService: AuthenticationService,
+    private router: Router,
   ) {
     this.initializeApp();
   }
@@ -29,6 +33,14 @@ export class AppComponent {
       // set to portrait
       this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
 
+
+      this.authenticationService.authenticationState.subscribe(state => {
+        if (state) {
+          this.router.navigate(['tabs']);
+        } else {
+          this.router.navigate(['login']);
+        }
+      });
     });
   }
 }

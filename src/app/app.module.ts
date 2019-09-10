@@ -10,14 +10,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {BarcodeScanner} from "@ionic-native/barcode-scanner/ngx";
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
+import {IonicStorageModule} from "@ionic/storage";
+import {AuthenticationService} from "./services/authentication.service";
+import {AuthGuard} from "./guards/auth.guard";
 
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot({
-    backButtonText: '后退'
-  }), AppRoutingModule],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot({
+      backButtonText: '后退'
+    }),
+    IonicStorageModule.forRoot(),
+    AppRoutingModule,
+
+  ],
   providers: [
     StatusBar,
     SplashScreen,
@@ -26,6 +35,10 @@ import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
     //native
     BarcodeScanner,
     ScreenOrientation,
+
+    //service
+    AuthenticationService,
+    AuthGuard,
   ],
   bootstrap: [AppComponent]
 })
