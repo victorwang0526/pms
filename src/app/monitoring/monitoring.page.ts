@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {NavController} from "@ionic/angular";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-monitoring',
@@ -20,12 +20,12 @@ export class MonitoringPage implements OnInit {
     // {channel: '9', name: '视频9@DS-7808NB-K2(C30163833)', status: '不在线', liveStatus: '未开通', url: 'https://hls01open.ys7.com/openlive/859ffb6f794f44259f06dc7117513241.m3u8'},
     {channel: '10', name: '视频5@DS-7808NB-K2(C30163833)', status: '不在线', liveStatus: '未开通', url: 'https://hls01open.ys7.com/openlive/859ffb6f794f44259f06dc7117513241.m3u8'},
   ];
-  constructor(private navCtrl: NavController) { }
+  constructor(private router: Router,) { }
 
   ngOnInit() {
   }
 
   openDetail(m) {
-    this.navCtrl.navigate(['monitor-detail', {monitor: JSON.stringify(m)}])
+    this.router.navigate(['monitor-detail', {monitor: JSON.stringify(m)}])
   }
 }
