@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-employee-card-detail',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeCardDetailPage implements OnInit {
 
-  constructor() { }
+  employee: any;
+  constructor(private route: ActivatedRoute,) {
 
-  ngOnInit() {
   }
 
+  ngOnInit() {
+    this.route.paramMap.subscribe(paramMap => {
+      this.employee = JSON.parse(paramMap.get('employee'));
+    })
+  }
 }

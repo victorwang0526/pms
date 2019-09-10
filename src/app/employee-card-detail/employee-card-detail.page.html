@@ -8,5 +8,23 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-card>
+    <div text-center>
+      <img src="assets/image/avatar/{{employee.avatar}}" />
+    </div>
+    <ion-card-header>
+      <ion-card-subtitle>{{employee.post}}</ion-card-subtitle>
+      <ion-card-title>{{employee.name}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="employee-detail">
+      该同志经过宁夏天源店里有限公司培训考核合格，具备生产配电工程施工资格。
+      <div>出生年月：<span>{{employee.birthDay}}</span></div>
+      <div>身份证号：<span>{{employee.idNo}}</span></div>
+      <div>初次领证日期：<span>{{employee.registeDate}}</span></div>
+      <div>有效期始日期：<span>{{employee.registeDate}}</span></div>
+      <div>有效期年限：<span>{{employee.expired}}</span></div>
+      <div>发证单位：<span>{{employee.issuePost}}</span></div>
+      <div>发证时间：<span>{{employee.issueDate}}</span></div>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
