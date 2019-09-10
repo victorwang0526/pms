@@ -1,12 +1,18 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>监控详情</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>监控详情</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+    <video id="myPlayer"
+           src="http://hls01open.ys7.com/openlive/f2ac3ac4b62a4a2ab24aaff29cb39112.hd.m3u8"
+           [autoplay]
+           controls
+           playsInline
+           webkit-playsinline>
+    </video>
 </ion-content>
