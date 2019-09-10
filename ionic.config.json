@@ -1,5 +1,7 @@
 {
   "name": "pms",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
