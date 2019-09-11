@@ -20,7 +20,9 @@ export class MonitoringPage implements OnInit {
     // {channel: '9', name: '视频9@DS-7808NB-K2(C30163833)', status: '不在线', liveStatus: '未开通', url: 'https://hls01open.ys7.com/openlive/859ffb6f794f44259f06dc7117513241.m3u8'},
     {channel: '10', name: '视频5@DS-7808NB-K2(C30163833)', status: '不在线', liveStatus: '未开通', url: 'https://hls01open.ys7.com/openlive/859ffb6f794f44259f06dc7117513241.m3u8'},
   ];
-  constructor(private router: Router,) { }
+  constructor(private router: Router,) {
+    console.log('Monitoring Page Constructor');
+  }
 
   ngOnInit() {
   }

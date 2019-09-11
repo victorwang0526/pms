@@ -12,7 +12,9 @@ export class EmployeeCardPage implements OnInit {
 
   constructor(private router: Router,
               private barcodeScanner: BarcodeScanner,
-              private alertCtrl: AlertController) { }
+              private alertCtrl: AlertController) {
+    console.log('Employee Card Page Constructor');
+  }
 
   employees: Array<any> = [
     {id: 1, name: '闫磊', avatar: 'yanlei.png', certification: '生产配电工程施工资格', birthDay: '1992年5月7日', post: '劳务负责人', idNo: '640321199205071530', registeDate: '2019年2月', expired: '一年', issueDate: '2019年2月15日', issuePost: ''},

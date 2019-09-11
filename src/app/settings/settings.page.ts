@@ -8,7 +8,9 @@ import {AuthenticationService} from "../services/authentication.service";
 })
 export class SettingsPage implements OnInit {
 
-  constructor(private authService: AuthenticationService) { }
+  constructor(private authService: AuthenticationService) {
+    console.log('Settings Page Constructor');
+  }
 
   ngOnInit() {
   }
