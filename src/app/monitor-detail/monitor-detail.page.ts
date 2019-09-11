@@ -13,7 +13,6 @@ export class MonitorDetailPage implements OnInit {
   constructor(private route: ActivatedRoute,) {
     this.route.paramMap.subscribe(paramMap => {
       this.monitor = JSON.parse(paramMap.get('monitor'));
-      console.log('....')
 
       //开始初始化监控地址
       this.player = new EZUIPlayer({
@@ -27,7 +26,6 @@ export class MonitorDetailPage implements OnInit {
       this.player.src = this.monitor.url;
       //播放
       this.player.play();
-
     });
   }
 
@@ -35,9 +33,8 @@ export class MonitorDetailPage implements OnInit {
   monitor: any;
 
   ngOnInit() {
-
-
-
+    if(this.player) {
+      this.player.play();
+    }
   }
-
 }
