@@ -4,12 +4,12 @@
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
-  --ion-color-primary: #009688;
+  --ion-color-primary: #00af88;
   --ion-color-primary-rgb: 56, 128, 255;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
-  --ion-color-primary-shade: #008478;
-  --ion-color-primary-tint: #1aa194;
+  --ion-color-primary-shade: #009a78;
+  --ion-color-primary-tint: #1ab794;
 
   /** secondary **/
   --ion-color-secondary: #0cd1e8;
@@ -79,6 +79,6 @@
 
   // customer css
 
-  --ion-toolbar-background: #009688;
+  --ion-toolbar-background: #00af88;
   --ion-toolbar-color: white;
 }
